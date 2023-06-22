@@ -16,6 +16,11 @@ def pick(picklist, d):
     return keyfilter(lambda k: k in picklist, d)
 
 
+def omit(omitlist, d):
+    from toolz import keyfilter
+    return keyfilter(lambda k: k not in omitlist, d)
+
+
 def dict_from_json(json_string):
     import json
     return json.loads(json_string)
