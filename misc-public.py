@@ -14,3 +14,13 @@ def load_taskgraph(filename):
 def pick(picklist, d):
     from toolz import keyfilter
     return keyfilter(lambda k: k in picklist, d)
+
+
+def dict_from_json(json_string):
+    import json
+    return json.loads(json_string)
+
+
+def load_file(filename):
+    with open(filename) as f:
+        return f.read()
