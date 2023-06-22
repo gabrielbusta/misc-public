@@ -24,3 +24,8 @@ def dict_from_json(json_string):
 def data_from_filename(filename):
     with open(filename) as f:
         return f.read()
+
+
+def pp(obj):
+    from pprint import pprint as pp
+    pp(obj)
