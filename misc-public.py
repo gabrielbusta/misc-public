@@ -11,14 +11,14 @@ def load_taskgraph(filename):
     return taskgraph, ID
 
 
-def pick(picklist, d):
+def pick(picks, d):
     from toolz import keyfilter
-    return keyfilter(lambda k: k in picklist, d)
+    return keyfilter(lambda k: k in picks, d)
 
 
-def omit(omitlist, d):
+def omit(omissions, d):
     from toolz import keyfilter
-    return keyfilter(lambda k: k not in omitlist, d)
+    return keyfilter(lambda k: k not in omissions, d)
 
 
 def dict_from_json(json_string):
