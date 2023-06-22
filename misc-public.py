@@ -21,6 +21,6 @@ def dict_from_json(json_string):
     return json.loads(json_string)
 
 
-def load_file(filename):
+def data_from_filename(filename):
     with open(filename) as f:
         return f.read()
