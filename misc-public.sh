@@ -6,4 +6,6 @@ wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | gpg --dearmo
 echo "deb [signed-by=/etc/apt/trusted.gpg.d/packages.mozilla.org.gpg] https://packages.mozilla.org/apt mozilla main" | sudo tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null
 
 # Update your package list and install the Firefox Nightly .deb package and desired language pack:
-sudo apt-get update && sudo apt-get install firefox-nightly && sudo apt-get install firefox-nightly-l10n-es-MX
+sudo apt-get update && sudo apt-get install firefox-nightly && sudo apt-get install firefox-nightly-l10n-es-mx
+
+xdg-open https://example.com
