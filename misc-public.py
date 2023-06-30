@@ -1,3 +1,16 @@
+def get_hash(filepath, hash_type="sha512"):
+    """Function to return the digest hash of a file based on filename and algorithm"""
+    import hashlib
+    digest = hashlib.new(hash_type)
+    with open(filepath, "rb") as fobj:
+        while True:
+            chunk = fobj.read(HASH_BLOCK_SIZE)
+            if not chunk:
+                break
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
 def load_taskgraph(filename):
     import json
     f = open('./artifacts/task-graph.json')
