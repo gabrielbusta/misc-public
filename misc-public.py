@@ -1,6 +1,7 @@
 def get_hash(filepath, hash_type="sha512"):
     """Function to return the digest hash of a file based on filename and algorithm"""
     import hashlib
+    HASH_BLOCK_SIZE = 1024 * 1024
     digest = hashlib.new(hash_type)
     with open(filepath, "rb") as fobj:
         while True:
