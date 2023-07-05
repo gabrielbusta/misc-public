@@ -18,11 +18,7 @@ def load_taskgraph():
     data = f.read()
     f.close()
     taskgraph = json.loads(data)
-    f = open('./artifacts/label-to-taskid.json')
-    data = f.read()
-    f.close()
-    ID = json.loads(data)
-    return taskgraph, ID
+    return taskgraph
 
 
 def pick(picks, d):
