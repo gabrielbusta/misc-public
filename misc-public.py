@@ -12,7 +12,7 @@ def get_hash(filepath, hash_type="sha512"):
     return digest.hexdigest()
 
 
-def load_taskgraph(filename):
+def load_taskgraph():
     import json
     f = open('./artifacts/task-graph.json')
     data = f.read()
