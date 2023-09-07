@@ -1,0 +1,327 @@
+
+
+{
+  "kind": string,
+  "id": string,
+  "creationTimestamp": string,
+  "name": string,
+  "description": string,
+  "tags": {
+    "items": [
+      string
+    ],
+    "fingerprint": string
+  },
+  "machineType": string,
+  "status": enum,
+  "statusMessage": string,
+  "zone": string,
+  "canIpForward": boolean,
+  "networkInterfaces": [
+    {
+      "kind": string,
+      "network": string,
+      "subnetwork": string,
+      "networkIP": string,
+      "ipv6Address": string,
+      "internalIpv6PrefixLength": integer,
+      "name": string,
+      "accessConfigs": [
+        {
+          "kind": string,
+          "type": enum,
+          "name": string,
+          "natIP": string,
+          "externalIpv6": string,
+          "externalIpv6PrefixLength": integer,
+          "setPublicPtr": boolean,
+          "publicPtrDomainName": string,
+          "networkTier": enum,
+          "securityPolicy": string
+        }
+      ],
+      "ipv6AccessConfigs": [
+        {
+          "kind": string,
+          "type": enum,
+          "name": string,
+          "natIP": string,
+          "externalIpv6": string,
+          "externalIpv6PrefixLength": integer,
+          "setPublicPtr": boolean,
+          "publicPtrDomainName": string,
+          "networkTier": enum,
+          "securityPolicy": string
+        }
+      ],
+      "aliasIpRanges": [
+        {
+          "ipCidrRange": string,
+          "subnetworkRangeName": string
+        }
+      ],
+      "fingerprint": string,
+      "stackType": enum,
+      "ipv6AccessType": enum,
+      "queueCount": integer,
+      "nicType": enum,
+      "networkAttachment": string
+    }
+  ],
+  "disks": [
+    {
+      "kind": string,
+      "type": enum,
+      "mode": enum,
+      "savedState": enum,
+      "source": string,
+      "deviceName": string,
+      "index": integer,
+      "boot": boolean,
+      "initializeParams": {
+        "diskName": string,
+        "sourceImage": string,
+        "diskSizeGb": string,
+        "diskType": string,
+        "sourceImageEncryptionKey": {
+          "rawKey": string,
+          "rsaEncryptedKey": string,
+          "kmsKeyName": string,
+          "sha256": string,
+          "kmsKeyServiceAccount": string
+        },
+        "labels": {
+          string: string,
+          ...
+        },
+        "sourceSnapshot": string,
+        "sourceInstantSnapshot": string,
+        "sourceSnapshotEncryptionKey": {
+          "rawKey": string,
+          "rsaEncryptedKey": string,
+          "kmsKeyName": string,
+          "sha256": string,
+          "kmsKeyServiceAccount": string
+        },
+        "description": string,
+        "replicaZones": [
+          string
+        ],
+        "guestOsFeatures": [
+          {
+            "type": enum
+          }
+        ],
+        "resourcePolicies": [
+          string
+        ],
+        "onUpdateAction": enum,
+        "provisionedIops": string,
+        "multiWriter": boolean,
+        "licenses": [
+          string
+        ],
+        "architecture": enum,
+        "resourceManagerTags": {
+          string: string,
+          ...
+        },
+        "provisionedThroughput": string,
+        "enableConfidentialCompute": boolean
+      },
+      "autoDelete": boolean,
+      "licenses": [
+        string
+      ],
+      "interface": enum,
+      "guestOsFeatures": [
+        {
+          "type": enum
+        }
+      ],
+      "diskEncryptionKey": {
+        "sha256": string,
+        "kmsKeyServiceAccount": string,
+
+        
+        "rawKey": string,
+        "rsaEncryptedKey": string,
+        "kmsKeyName": string
+        
+      },
+      "diskSizeGb": string,
+      "shieldedInstanceInitialState": {
+        "pk": {
+          "content": string,
+          "fileType": enum
+        },
+        "keks": [
+          {
+            "content": string,
+            "fileType": enum
+          }
+        ],
+        "dbs": [
+          {
+            "content": string,
+            "fileType": enum
+          }
+        ],
+        "dbxs": [
+          {
+            "content": string,
+            "fileType": enum
+          }
+        ]
+      },
+      "userLicenses": [
+        string
+      ],
+      "forceAttach": boolean,
+      "locked": boolean,
+      "architecture": enum
+    }
+  ],
+  "metadata": {
+    "kind": string,
+    "fingerprint": string,
+    "items": [
+      {
+        "key": string,
+        "value": string
+      }
+    ]
+  },
+  "serviceAccounts": [
+    {
+      "email": string,
+      "scopes": [
+        string
+      ]
+    }
+  ],
+  "selfLink": string,
+  "scheduling": {
+    "onHostMaintenance": enum,
+    "automaticRestart": boolean,
+    "preemptible": boolean,
+    "nodeAffinities": [
+      {
+        "key": string,
+        "operator": enum,
+        "values": [
+          string
+        ]
+      }
+    ],
+    "minNodeCpus": integer,
+    "locationHint": string,
+    "maintenanceFreezeDurationHours": integer,
+    "maintenanceInterval": enum,
+    "provisioningModel": enum,
+    "instanceTerminationAction": enum,
+    "maxRunDuration": {
+      "seconds": string,
+      "nanos": integer
+    },
+    "terminationTime": string,
+    "hostErrorTimeoutSeconds": integer,
+    "localSsdRecoveryTimeout": {
+      "seconds": string,
+      "nanos": integer
+    }
+  },
+  "cpuPlatform": string,
+  "labels": {
+    string: string,
+    ...
+  },
+  "params": {
+    "resourceManagerTags": {
+      string: string,
+      ...
+    }
+  },
+  "labelFingerprint": string,
+  "instanceEncryptionKey": {
+    "rawKey": string,
+    "rsaEncryptedKey": string,
+    "kmsKeyName": string,
+    "sha256": string,
+    "kmsKeyServiceAccount": string
+  },
+  "minCpuPlatform": string,
+  "guestAccelerators": [
+    {
+      "acceleratorType": string,
+      "acceleratorCount": integer
+    }
+  ],
+  "startRestricted": boolean,
+  "deletionProtection": boolean,
+  "resourcePolicies": [
+    string
+  ],
+  "sourceMachineImage": string,
+  "shieldedVmConfig": {
+    "enableSecureBoot": boolean,
+    "enableVtpm": boolean,
+    "enableIntegrityMonitoring": boolean
+  },
+  "shieldedVmIntegrityPolicy": {
+    "updateAutoLearnPolicy": boolean
+  },
+  "reservationAffinity": {
+    "consumeReservationType": enum,
+    "key": string,
+    "values": [
+      string
+    ]
+  },
+  "hostname": string,
+  "displayDevice": {
+    "enableDisplay": boolean
+  },
+  "shieldedInstanceConfig": {
+    "enableSecureBoot": boolean,
+    "enableVtpm": boolean,
+    "enableIntegrityMonitoring": boolean
+  },
+  "shieldedInstanceIntegrityPolicy": {
+    "updateAutoLearnPolicy": boolean
+  },
+  "sourceMachineImageEncryptionKey": {
+    "rawKey": string,
+    "rsaEncryptedKey": string,
+    "kmsKeyName": string,
+    "sha256": string,
+    "kmsKeyServiceAccount": string
+  },
+  "eraseWindowsVssSignature": boolean,
+  "postKeyRevocationActionType": enum,
+  "confidentialInstanceConfig": {
+    "enableConfidentialCompute": boolean
+  },
+  "fingerprint": string,
+  "privateIpv6GoogleAccess": enum,
+  "advancedMachineFeatures": {
+    "enableNestedVirtualization": boolean,
+    "threadsPerCore": integer,
+    "visibleCoreCount": integer,
+    "enableUefiNetworking": boolean
+  },
+  "lastStartTimestamp": string,
+  "lastStopTimestamp": string,
+  "lastSuspendedTimestamp": string,
+  "satisfiesPzs": boolean,
+  "resourceStatus": {
+    "scheduling": {
+      "terminationTimestamp": string
+    },
+    "physicalHost": string
+  },
+  "networkPerformanceConfig": {
+    "totalEgressBandwidthTier": enum
+  },
+  "keyRevocationActionType": enum
+}
