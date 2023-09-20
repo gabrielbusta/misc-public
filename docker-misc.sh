@@ -16,4 +16,4 @@ docker run \
 --env MOZ_FETCHES_DIR="/builds/worker/fetches" \
 --env UPLOAD_DIR="/builds/worker/artifacts" \
 --env EXTRA_MOZHARNESS_CONFIG=$EXTRA_MOZHARNESS_CONFIG \
-debian12-repackage
+$DOCKER_IMAGE
