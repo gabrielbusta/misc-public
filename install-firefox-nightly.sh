@@ -13,7 +13,18 @@ wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /et
 gpg -n -q --import --import-options import-show /etc/apt/keyrings/packages.mozilla.org.asc | awk '/pub/{getline; gsub(/^ +| +$/,""); print "\n"$0"\n"}'
 
 # Next, add the Mozilla APT repository to your sources list:
-echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main" | sudo tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main" | sudo tee /etc/apt/sources.list.d/mozilla.list > /dev/null
 
-# Update your package list and install the Firefox Nightly .deb package:
-sudo apt-get update && sudo apt-get install -y firefox-nightly-l10n-es-es
+# Update your package list
+sudo apt-get update
+
+# Check if a locale was passed in as an argument
+if [ "$#" -eq 1 ]; then
+    LOCALE=$1
+    PACKAGE_NAME="firefox-nightly-l10n-${LOCALE}"
+else
+    PACKAGE_NAME="firefox-nightly"
+fi
+
+# Install the Firefox Nightly package, localized if a locale was specified
+sudo apt-get install -y $PACKAGE_NAME
