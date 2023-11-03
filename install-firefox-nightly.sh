@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# For example: wget -O - https://raw.githubusercontent.com/gabrielBusta/misc-public/main/install-firefox-nightly.sh | bash -s -- es-es
+
 set -x
 set -euo pipefail
 
