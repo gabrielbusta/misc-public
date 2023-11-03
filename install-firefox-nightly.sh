@@ -1,3 +1,8 @@
+#!/bin/bash
+
+set -x
+set -euo pipefail
+
 # Create a directory to store APT repository keys if it doesn't exist:
 sudo install -d -m 0755 /etc/apt/keyrings
 
