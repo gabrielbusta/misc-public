@@ -44,6 +44,6 @@ Ship-It serves as a control panel for Mozilla's release managers, making it easy
 
 Balrog, Mozilla’s update server, functions like a reliable delivery service. It brings the latest and safest versions of Firefox, Mozilla VPN, and Thunderbird to people's devices.
 
-### **In Conclusion: The Art of Release Engineering**
+### **In Conclusion**
 
-Release engineering is a complex but interesting world. It ensures the software we depend on is created with precision and care. Whether it’s a nightly build or a stable release, each step in the release process plays a critical role in delivering a safe and enjoyable product. So, the next time you update your Firefox browser, remember the intricate journey it has taken, thanks to the world of release engineering!
+Release engineering is a complex but interesting world. It ensures the software we depend on is created with precision and care. Whether it’s a nightly build or a stable release, each step in the release process plays a critical role in delivering a safe and enjoyable product. So, the next time you update your Firefox browser, remember the intricate journey it has taken in the world of release engineering!
