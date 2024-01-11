@@ -16,6 +16,6 @@ Pin: origin packages.mozilla.org
 Pin-Priority: 1005
 ' | sudo tee /etc/apt/preferences.d/mozilla-firefox
 
-sudo snap remove firefox
 sudo apt-get update
+sudo snap remove firefox
 sudo apt-get install firefox
