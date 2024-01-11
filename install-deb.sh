@@ -8,6 +8,6 @@ Pin: origin northamerica-northeast2-apt.pkg.dev
 Pin-Priority: 1007
 ' | sudo tee /etc/apt/preferences.d/mozilla-firefox
 
-sudo apt-get update
 sudo snap remove firefox
+sudo apt-get update
 sudo apt-get install firefox
