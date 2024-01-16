@@ -13,9 +13,8 @@ echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://package
 echo '
 Package: *
 Pin: origin packages.mozilla.org
-Pin-Priority: 1005
+Pin-Priority: 1000
 ' | sudo tee /etc/apt/preferences.d/mozilla-firefox
 
-sudo snap remove firefox
 sudo apt-get update
 sudo apt-get install firefox
