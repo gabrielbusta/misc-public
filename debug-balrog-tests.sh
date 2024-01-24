@@ -4,6 +4,8 @@ export CONTAINER_NAME=$DOCKER_IMAGE-$(date +%s)
 export TARGET="/builds/worker/checkouts/vcs"
 export SRC=$(pwd)
 
+wget -O image.tar.zst $DOCKER_IMAGE_URL
+
 unzstd "$DOCKER_IMAGE.tar.zst"
 docker load --input "$DOCKER_IMAGE.tar"
 
