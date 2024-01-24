@@ -25,4 +25,6 @@ docker run \
 -it --mount src=$SRC,target=$TARGET,type=bind \
 --name $CONTAINER_NAME \
 --platform linux/amd64 \
+-w $TARGET \
+--rm \
 $DOCKER_IMAGE
