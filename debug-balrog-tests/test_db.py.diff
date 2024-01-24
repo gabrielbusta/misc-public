@@ -1,0 +1,12 @@
+diff --git a/tests/test_db.py b/tests/test_db.py
+index b8477ffc..f7d523e8 100644
+--- a/tests/test_db.py
++++ b/tests/test_db.py
+@@ -5405,6 +5405,7 @@ class TestPermissions(unittest.TestCase, MemoryDatabaseMixin):
+         )
+ 
+     def testRevokePermission(self):
++        import pytest; pytest.set_trace()
+         self.permissions.delete({"username": "bob", "permission": "release"}, changed_by="bill", old_data_version=1)
+         query = self.permissions.t.select().where(self.permissions.username == "bob")
+         query = query.where(self.permissions.permission == "release")
