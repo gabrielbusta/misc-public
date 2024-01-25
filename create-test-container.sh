@@ -2,7 +2,7 @@
 
 # IMPORTRANT: RUN THIS SCRIPT IN THE "balrog" REPOSITORY!
 # It will create a container using the CI's test image, mount your local balrog clone at /builds/worker/checkouts/vcs,
-# and drop you into a bash shell inside of it. From there you can
+# and drop you into a bash shell inside of the container in that directory. From there you can
 # run the test in the container: https://github.com/gabrielBusta/misc-public/blob/main/in-test-container.sh
 
 set -x
