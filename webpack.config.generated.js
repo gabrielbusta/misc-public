@@ -1,3 +1,7 @@
+const webpack = require("webpack");
+
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 module.exports = {
   mode: "development",
   devtool: "cheap-module-eval-source-map",
@@ -414,75 +418,52 @@ module.exports = {
     minimize: false,
     splitChunks: {
       chunks: "all",
-      maxInitialRequests: null,
       name: true,
     },
     runtimeChunk: "single",
   },
   plugins: [
-    {
-      keys: [
-        "HOST",
-        "PORT",
-        "BALROG_ROOT_URL",
-        "AUTH0_CLIENT_ID",
-        "AUTH0_DOMAIN",
-        "AUTH0_AUDIENCE",
-        "AUTH0_RESPONSE_TYPE",
-        "AUTH0_SCOPE",
-        "AUTH0_REDIRECT_URI",
-        "GCS_NIGHTLY_HISTORY_BUCKET",
-        "GCS_RELEASES_HISTORY_BUCKET",
-      ],
-      defaultValues: {
-        HOST: "localhost",
-        PORT: 9000,
-        BALROG_ROOT_URL: "https://localhost:8010",
-        AUTH0_CLIENT_ID: "GlZhJQfx52b7MLQ19AjuTJHieiB4oh1j",
-        AUTH0_DOMAIN: "balrog-localdev.auth0.com",
-        AUTH0_AUDIENCE: "balrog-localdev",
-        AUTH0_RESPONSE_TYPE: "token id_token",
-        AUTH0_SCOPE: "full-user-credentials openid profile email",
-        AUTH0_REDIRECT_URI: "https://localhost:9000/login",
-        GCS_NIGHTLY_HISTORY_BUCKET:
-          "https://www.googleapis.com/storage/v1/b/balrog-prod-nightly-history-v1/o",
-        GCS_RELEASES_HISTORY_BUCKET:
-          "https://www.googleapis.com/storage/v1/b/balrog-prod-release-history-v1/o",
+    new webpack.EnvironmentPlugin({
+      HOST: "localhost",
+      PORT: 9000,
+      BALROG_ROOT_URL: "https://localhost:8010",
+      AUTH0_CLIENT_ID: "GlZhJQfx52b7MLQ19AjuTJHieiB4oh1j",
+      AUTH0_DOMAIN: "balrog-localdev.auth0.com",
+      AUTH0_AUDIENCE: "balrog-localdev",
+      AUTH0_RESPONSE_TYPE: "token id_token",
+      AUTH0_SCOPE: "full-user-credentials openid profile email",
+      AUTH0_REDIRECT_URI: "https://localhost:9000/login",
+      GCS_NIGHTLY_HISTORY_BUCKET:
+        "https://www.googleapis.com/storage/v1/b/balrog-prod-nightly-history-v1/o",
+      GCS_RELEASES_HISTORY_BUCKET:
+        "https://www.googleapis.com/storage/v1/b/balrog-prod-release-history-v1/o",
+    }),
+    new HtmlWebpackPlugin({
+      template: "src/index.html",
+      templateContent: false,
+      filename: "index.html",
+      publicPath: "auto",
+      hash: false,
+      inject: "body",
+      scriptLoading: "blocking",
+      compile: true,
+      favicon: "/app/src/images/favicon.png",
+      minify: "auto",
+      cache: true,
+      showErrors: true,
+      chunks: ["index"],
+      excludeChunks: [],
+      chunksSortMode: "auto",
+      meta: {
+        viewport: "width=device-width, initial-scale=1",
       },
-    },
-    {
-      options: {
-        template: "src/index.html",
-        templateContent: false,
-        filename: "index.html",
-        publicPath: "auto",
-        hash: false,
-        inject: "body",
-        scriptLoading: "blocking",
-        compile: true,
-        favicon: "/app/src/images/favicon.png",
-        minify: "auto",
-        cache: true,
-        showErrors: true,
-        chunks: ["index"],
-        excludeChunks: [],
-        chunksSortMode: "auto",
-        meta: {
-          viewport: "width=device-width, initial-scale=1",
-        },
-        base: false,
-        title: "Webpack App",
-        xhtml: false,
-        appMountId: "root",
-        lang: "en",
-      },
-      version: 4,
-    },
-    {
-      options: {},
-      fullBuildTimeout: 200,
-      requestTimeout: 10000,
-    },
+      base: false,
+      title: "Webpack App",
+      xhtml: false,
+      appMountId: "root",
+      lang: "en",
+    }),
+    new webpack.HotModuleReplacementPlugin({}),
   ],
   entry: {
     index: ["/app/src/index"],
