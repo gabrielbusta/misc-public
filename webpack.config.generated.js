@@ -67,7 +67,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: {},
         enforce: "pre",
         include: ["/app/src", "/app/test"],
         use: [
@@ -293,7 +292,6 @@ module.exports = {
         ],
       },
       {
-        test: {},
         use: [
           {
             loader: "/app/node_modules/html-loader/index.js",
@@ -304,7 +302,6 @@ module.exports = {
         ],
       },
       {
-        test: {},
         include: ["/app/src", "/app/test"],
         use: [
           {
@@ -351,7 +348,6 @@ module.exports = {
       {
         oneOf: [
           {
-            test: {},
             use: [
               {
                 loader: "/app/node_modules/style-loader/dist/cjs.js",
@@ -366,7 +362,6 @@ module.exports = {
             ],
           },
           {
-            test: {},
             use: [
               {
                 loader: "/app/node_modules/style-loader/dist/cjs.js",
@@ -382,7 +377,6 @@ module.exports = {
         ],
       },
       {
-        test: {},
         use: [
           {
             loader: "/app/node_modules/file-loader/dist/cjs.js",
@@ -393,7 +387,6 @@ module.exports = {
         ],
       },
       {
-        test: {},
         use: [
           {
             loader: "/app/node_modules/url-loader/dist/cjs.js",
@@ -405,7 +398,6 @@ module.exports = {
         ],
       },
       {
-        test: {},
         use: [
           {
             loader: "/app/node_modules/worker-loader/dist/cjs.js",
