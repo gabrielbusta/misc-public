@@ -1,0 +1,30 @@
+diff --git a/ui/webpack.config.js b/ui/webpack.config.js
+index c0e8e719..c2e11463 100644
+--- a/ui/webpack.config.js
++++ b/ui/webpack.config.js
+@@ -3,4 +3,25 @@
+ // Neutrino's inspect feature can be used to view/export the generated configuration.
+ const neutrino = require('neutrino');
+ 
++const fs = require('fs');
++const path = require('path');
++
++// Generate webpack configuration using Neutrino
++const webpackConfig = neutrino().webpack();
++
++// Convert the configuration object to a JSON string
++const configString = JSON.stringify(webpackConfig, null, 2);
++
++// Specify the path and filename of the output file
++const outputFile = path.join(__dirname, 'webpack.config.output.json');
++
++// Write the configuration string to the file
++fs.writeFile(outputFile, configString, (err) => {
++  if (err) {
++    console.error('Error writing webpack configuration to file:', err);
++  } else {
++    console.log('Webpack configuration successfully written to:', outputFile);
++  }
++});
++
+ module.exports = neutrino().webpack();
