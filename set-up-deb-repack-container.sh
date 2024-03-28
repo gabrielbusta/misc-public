@@ -1,3 +1,5 @@
+set -xe
+
 export DOCKER_IMAGE="debian12-repackage"
 
 # unzstd "$DOCKER_IMAGE.tar.zst"
@@ -19,5 +21,5 @@ docker run \
 --env GECKO_PATH=$TARGET \
 --env MOZ_FETCHES_DIR="/builds/worker/fetches" \
 --env UPLOAD_DIR="/builds/worker/artifacts" \
---env EXTRA_MOZHARNESS_CONFIG=$EXTRA_MOZHARNESS_CONFIG \
+--env EXTRA_MOZHARNESS_CONFIG="$EXTRA_MOZHARNESS_CONFIG" \
 $DOCKER_IMAGE
