@@ -1,7 +1,7 @@
 export DOCKER_IMAGE="debian12-repackage"
 
-unzstd "$DOCKER_IMAGE.tar.zst"
-docker load --input "$DOCKER_IMAGE.tar"
+# unzstd "$DOCKER_IMAGE.tar.zst"
+# docker load --input "$DOCKER_IMAGE.tar"
 
 export CONTAINER_NAME=$DOCKER_IMAGE-$(date +%s)
 export SRC=$(pwd)
@@ -13,6 +13,7 @@ export EXTRA_MOZHARNESS_CONFIG="{\"objdir\": \"obj-build\", \"repackage_config\"
 
 docker run \
 -it --mount src=$SRC,target=$TARGET,type=bind \
+--user worker \
 --name $CONTAINER_NAME \
 --platform linux/amd64 \
 --env GECKO_PATH=$TARGET \
