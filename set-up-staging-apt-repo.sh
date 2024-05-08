@@ -8,4 +8,4 @@ wget -q https://repository.stage.productdelivery.nonprod.webservices.mozgcp.net/
 gpg -n -q --import --import-options import-show /etc/apt/keyrings/repository.stage.productdelivery.nonprod.webservices.mozgcp.net.asc | awk '/pub/{getline; gsub(/^ +| +$/,""); print "\n"$0"\n"}'
 
 # Next, add the staging APT repository to your sources list:
-echo "deb [signed-by=/etc/apt/keyrings/repository.stage.productdelivery.nonprod.webservices.mozgcp.net.asc] https://repository.stage.productdelivery.nonprod.webservices.mozgcp.net/apt mozilla main" | sudo tee -a /etc/apt/sources.list.d/mozilla-stage.list > /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/repository.stage.productdelivery.nonprod.webservices.mozgcp.net.asc] https://repository.stage.productdelivery.nonprod.webservices.mozgcp.net/apt mozilla main" | sudo tee /etc/apt/sources.list.d/mozilla-stage.list > /dev/null
