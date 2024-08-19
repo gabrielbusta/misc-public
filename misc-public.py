@@ -12,6 +12,13 @@ def get_hash(filepath, hash_type="sha512"):
     return digest.hexdigest()
 
 
+def get_file_size(filepath):
+    import os
+    if not os.path.isfile(filepath):
+        raise ValueError(f"The path '{filepath}' is not a valid file.")
+    return os.path.getsize(filepath)
+
+
 def load_taskgraph():
     import json
     f = open('./artifacts/task-graph.json')
