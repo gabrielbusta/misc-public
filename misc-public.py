@@ -28,12 +28,15 @@ def load_taskgraph():
     return taskgraph
 
 
-def load_firefox_ci_task_graph(task_id):
+def load_firefox_ci_task_graph(task_id, task_run=0):
     import requests
-    url = f"https://firefoxci.taskcluster-artifacts.net/{task_id}/0/public/task-graph.json"
+    url = f"https://firefoxci.taskcluster-artifacts.net/{task_id}/{task_run}/public/task-graph.json"
     response = requests.get(url)
     task_graph = response.json()
-    return task_graph
+    url = f"https://firefoxci.taskcluster-artifacts.net/{task_id}/{task_run}/public/label-to-taskid.json"
+    response = requests.get(url)
+    label_to_task_id = response.json()
+    return task_graph, label_to_task_id
 
 
 def pick(picks, d):
