@@ -19,9 +19,9 @@ def get_file_size(filepath):
     return os.path.getsize(filepath)
 
 
-def load_taskgraph():
+def load_taskgraph(path='./artifacts/task-graph.json'):
     import json
-    f = open('./artifacts/task-graph.json')
+    f = open(path)
     data = f.read()
     f.close()
     taskgraph = json.loads(data)
