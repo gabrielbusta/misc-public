@@ -28,6 +28,14 @@ def load_taskgraph():
     return taskgraph
 
 
+def load_firefox_ci_task_graph(task_id):
+    import requests
+    url = f"https://firefoxci.taskcluster-artifacts.net/{task_id}/0/public/task-graph.json"
+    response = requests.get(url)
+    task_graph = response.json()
+    return task_graph
+
+
 def pick(picks, d):
     from toolz import keyfilter
     return keyfilter(lambda k: k in picks, d)
