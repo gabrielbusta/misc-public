@@ -39,6 +39,11 @@ def load_firefox_ci_task_graph(task_id, task_run=0):
     return task_graph, label_to_task_id
 
 
+def open_task(task_id):
+    import webbrowser
+    webbrowser.open(f"https://firefox-ci-tc.services.mozilla.com/tasks/{task_id}", new=2)
+
+
 def pick(picks, d):
     from toolz import keyfilter
     return keyfilter(lambda k: k in picks, d)
