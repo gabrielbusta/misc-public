@@ -19,6 +19,14 @@ def get_file_size(filepath):
     return os.path.getsize(filepath)
 
 
+def schedule(tasks):
+    print('#!/bin/bash\n')
+    for t in tasks:
+        print(f'# rerun {t}')
+        print(f"echo \"running {t}\"")
+        print(f"taskcluster api queue scheduleTask \"{t}\"\n")
+
+
 def load_taskgraph(path='./artifacts/task-graph.json'):
     import json
     f = open(path)
