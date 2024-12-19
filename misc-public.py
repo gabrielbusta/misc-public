@@ -23,7 +23,7 @@ def schedule(tasks):
     print('#!/bin/bash\n')
     for t in tasks:
         print(f'# rerun {t}')
-        print(f"echo \"running {t}\"")
+        print(f"echo \"scheduling {t}\"")
         print(f"taskcluster api queue scheduleTask \"{t}\"\n")
 
 
