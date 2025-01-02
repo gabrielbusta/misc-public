@@ -27,13 +27,12 @@ def schedule(tasks):
         print(f"taskcluster api queue scheduleTask \"{t}\"\n")
 
 
-def load_taskgraph(path='./artifacts/task-graph.json'):
+def load_task_graph(path):
     import json
-    f = open(path)
-    data = f.read()
-    f.close()
-    taskgraph = json.loads(data)
-    return taskgraph
+    with open(path) as f:
+        data = f.read()
+    task_graph = json.loads(data)
+    return task_graph
 
 
 def load_firefox_ci_task_graph(task_id, task_run=0):
