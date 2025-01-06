@@ -1,0 +1,61 @@
+diff --git a/third_party/python/taskcluster_taskgraph/taskgraph/generator.py b/third_party/python/taskcluster_taskgraph/taskgraph/generator.py
+--- a/third_party/python/taskcluster_taskgraph/taskgraph/generator.py
++++ b/third_party/python/taskcluster_taskgraph/taskgraph/generator.py
+@@ -73,6 +73,8 @@ class Kind:
+             self.graph_config,
+             write_artifacts=write_artifacts,
+         )
++        if self.name == 'shippable-l10n':
++            print('generator:breakpoint')
+         tasks = [
+             Task(
+                 self.name,
+@@ -85,8 +87,10 @@ class Kind:
+                 soft_dependencies=task_dict.get("soft-dependencies"),
+                 if_dependencies=task_dict.get("if-dependencies"),
+             )
+-            for task_dict in transforms(trans_config, inputs)
++            for task_dict in transforms(trans_config, inputs, verbose=self.name == 'shippable-l10n')
+         ]
++        if self.name == 'shippable-l10n':
++            print('generator:breakpoint')
+         return tasks
+ 
+     @classmethod
+diff --git a/third_party/python/taskcluster_taskgraph/taskgraph/transforms/base.py b/third_party/python/taskcluster_taskgraph/taskgraph/transforms/base.py
+--- a/third_party/python/taskcluster_taskgraph/taskgraph/transforms/base.py
++++ b/third_party/python/taskcluster_taskgraph/taskgraph/transforms/base.py
+@@ -106,6 +106,9 @@ class TransformConfig:
+             )
+         return repo_configs
+ 
++import inspect
++import sys
++from pprint import pp
+
+ @dataclass()
+ class TransformSequence:
+@@ -121,9 +124,21 @@ class TransformSequence:
+ 
+     _transforms: List = field(default_factory=list)
+ 
+-    def __call__(self, config, items):
++    def __call__(self, config, items, verbose=False):
+         for xform in self._transforms:
+-            items = xform(config, items)
++            if verbose and inspect.isfunction(xform):
++                print(f"Transform is a *function* named '{xform.__name__}' in module '{xform.__module__}'")
++                sys.stdout.flush()
++                items = xform(config, items)
++                function_name = 'chunk_locales'
++                if xform.__name__ == function_name:
++                    names = [item['name'] for item in items]
++                    pp(names)
++                    print()
++            elif verbose and isinstance(xform, TransformSequence):
++                items = xform(config, items, verbose=verbose)
++            else:
++                items = xform(config, items)
+             if items is None:
+                 raise Exception(f"Transform {xform} is not a generator")
+         return items
