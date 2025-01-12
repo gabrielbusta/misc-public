@@ -1,15 +1,12 @@
 ### Ingredients
 
-1. ** Cilantro, Fresh** 10 g - 10.0 g
+1. Cilantro, Fresh. 10 g - 10.0 g
 
-2. **Garam Masala**  
-   - Quantity: 1 tsp - 1.7 g  
+2. Garam Masala. 1 tsp - 1.7 g  
 
-3. **Siggis Whole Milk Skyr**  
-   - Quantity: 270 g - 270.0 g  
+3. Siggis Whole Milk Skyr** 270 g - 270.0 g  
 
-4. **Muir Glen Tomatoes**  
-   - Quantity: 28 oz - 793.8 g  
+4. **Muir Glen Tomatoes** 28 oz - 793.8 g  
 
 5. **Tap Water**  
    - Quantity: 0.5 cup - 118.5 g
