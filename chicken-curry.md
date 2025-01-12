@@ -4,7 +4,7 @@
 
 2. Garam Masala- 1 tsp - 1.7 g  
 
-3. Siggis Whole Milk Skyr - 1 cup - 270 g - 270.0 g  
+3. Siggis Whole Milk Skyr - 1 cup - 200 g  
 
 4. Muir Glen Tomatoes. 28 oz - 793.8 g  
 
