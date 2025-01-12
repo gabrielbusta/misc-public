@@ -20,6 +20,8 @@
 
 - Cilantro, Fresh - 10.0 g (Chopped)
 
+- Yellow Onion - 1 medium (2 1/2" diameter) - 110.0 g (Chopped)
+
 - Siggis Whole Milk Skyr - 1 cup - 230 g  
 
 - Muir Glen Tomatoes - 28 oz
@@ -32,4 +34,3 @@
 
 - Avocado Oil - 3 tsp - 13.6 g  
 
-- Yellow Onion - 1 medium (2 1/2" diameter) - 110.0 g
