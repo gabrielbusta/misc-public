@@ -10,9 +10,9 @@
 
 - Red Pepper, Cayenne, Ground - 0.5 tsp - 0.9 g
 
-- Garam Masala- 1 tsp - 1.7 g
+- Garam Masala- 1 tsp - 1.7 g (Separate)
 
-- Salt - 1 tsp - 6.1 g
+- Salt - 1 tsp - 6.1 g (Separate)
 
 - Cilantro, Fresh - 10.0 g
 
