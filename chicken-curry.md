@@ -1,8 +1,18 @@
 ### Ingredients
 
-- Cilantro, Fresh - 10.0 g
+- Curry Powder - 0.5 tbsp - 3.2 g  
 
-- Garam Masala- 1 tsp - 1.7 g  
+- Cumin, Ground - 0.25 tsp - 0.5 g  
+
+- Turmeric, Ground - 0.5 tsp - 1.6 g  
+
+- Penzeys, Ground Coriander - 2 x 1/4 tsp - 1.0 g
+
+- Red Pepper, Cayenne, Ground - 0.5 tsp - 0.9 g
+
+- Garam Masala- 1 tsp - 1.7 g
+
+- Cilantro, Fresh - 10.0 g
 
 - Siggis Whole Milk Skyr - 1 cup - 230 g  
 
@@ -11,16 +21,6 @@
 - Tap Water - 0.5 cup - 120 g
 
 - Tomato Paste - 5 tbsp - 82 g
-
-- Curry Powder - 0.5 tbsp - 3.2 g  
-
-- Cumin, Ground - 0.25 tsp - 0.5 g  
-
-- Turmeric, Ground - 0.5 tsp - 1.6 g  
-
-- Penzeys, Ground Coriander - 2 x 1/4 tsp - 1.0 g  
-
-- Red Pepper, Cayenne, Ground - 0.5 tsp - 0.9 g  
 
 - Chicken Breast, Skin Removed Before Cooking - 20oz - 570 g
 
