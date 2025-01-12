@@ -12,6 +12,8 @@
 
 - Garam Masala- 1 tsp - 1.7 g
 
+- Salt - 1 tsp - 6.1 g
+
 - Cilantro, Fresh - 10.0 g
 
 - Siggis Whole Milk Skyr - 1 cup - 230 g  
@@ -23,8 +25,6 @@
 - Tomato Paste - 5 tbsp - 82 g
 
 - Chicken Breast, Skin Removed Before Cooking - 20oz - 570 g
-
-- Salt - 1 tsp - 6.1 g  
 
 - Avocado Oil - 3 tsp - 13.6 g  
 
