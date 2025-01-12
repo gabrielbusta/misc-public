@@ -30,7 +30,7 @@
 
 - Tomato Paste - 5 tbsp - 82 g
 
-- Chicken Breast, Skin Removed Before Cooking - 20oz - 570 g
+- Chicken Breast, Skin Removed - 20oz - 570 g (Cubed)
 
 - Avocado Oil - 3 tsp - 13.6 g  
 
