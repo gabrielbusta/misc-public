@@ -33,8 +33,7 @@
 11. **Red Pepper, Cayenne, Ground**  
     - Quantity: 0.5 tsp - 0.9 g  
 
-12. **Chicken Breast, Skin Removed Before Cooking**  
-    - Quantity: 22 oz - 623.7 g  
+12. **Chicken Breast, Skin Removed Before Cooking** 20oz - 570 g  
 
 13. **Salt**  
     - Quantity: 1 tsp - 6.1 g  
