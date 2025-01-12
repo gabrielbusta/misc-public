@@ -1,7 +1,6 @@
 ### Ingredients
 
-1. **Coriander Leaf, Fresh**  
-   - Quantity: 10 g - 10.0 g  
+1. ** Cilantro, Fresh** 10 g - 10.0 g
 
 2. **Garam Masala**  
    - Quantity: 1 tsp - 1.7 g  
