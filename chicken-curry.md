@@ -14,7 +14,11 @@
 
 - Salt - 1 tsp - 6.1 g (Separate)
 
-- Cilantro, Fresh - 10.0 g
+- Ginger Root, Raw - 0.5 tsp - 3.4 g (Grated)
+
+- Garlic, Fresh - 1 clove - 3.0 g (Grated)
+
+- Cilantro, Fresh - 10.0 g (Chopped)
 
 - Siggis Whole Milk Skyr - 1 cup - 230 g  
 
@@ -29,7 +33,3 @@
 - Avocado Oil - 3 tsp - 13.6 g  
 
 - Yellow Onion - 1 medium (2 1/2" diameter) - 110.0 g
-
-- Ginger Root, Raw - 0.5 tsp - 3.4 g  
-
-- Garlic, Fresh - 1 clove - 3.0 g  
