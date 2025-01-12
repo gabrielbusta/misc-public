@@ -4,20 +4,17 @@
 
 2. Garam Masala- 1 tsp - 1.7 g  
 
-3. Siggis Whole Milk Skyr - 1 cup - 200 g  
+3. Siggis Whole Milk Skyr - 1 cup - 230 g  
 
-4. Muir Glen Tomatoes. 28 oz - 793.8 g  
+4. Muir Glen Tomatoes - 28 oz - 794
 
-5. Tap Water - 0.5 cup - 118.5 g
+5. Tap Water - 0.5 cup - 120 g
 
-6. **Tomato Paste**  
-   - Quantity: 5 tbsp - 81.9 g  
+6. Tomato Paste - 5 tbsp - 82 g
 
-7. **Curry Powder**  
-   - Quantity: 0.5 tbsp - 3.2 g  
+7. Curry Powder - 0.5 tbsp - 3.2 g  
 
-8. **Cumin, Ground**  
-   - Quantity: 0.25 tsp - 0.5 g  
+8. Cumin, Ground - 0.25 tsp - 0.5 g  
 
 9. **Turmeric, Ground**  
    - Quantity: 0.5 tsp - 1.6 g  
