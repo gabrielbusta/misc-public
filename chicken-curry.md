@@ -24,13 +24,13 @@
 
 - Siggis Whole Milk Skyr - 1 cup - 240 g  
 
+- Chicken Breast, Skin Removed - 20oz - 570 g (Cubed)
+
 - Muir Glen Tomatoes - 28 oz
 
 - Tap Water - 0.5 cup - 120 g
 
 - Tomato Paste - 5 tbsp - 82 g
-
-- Chicken Breast, Skin Removed - 20oz - 570 g (Cubed)
 
 - Avocado Oil - 3 tsp - 13.6 g  
 
