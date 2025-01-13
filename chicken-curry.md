@@ -22,7 +22,7 @@
 
 - Yellow Onion - 1 medium (2 1/2" diameter) - 110.0 g (Chopped)
 
-- Siggis Whole Milk Skyr - 1 cup - 230 g  
+- Siggis Whole Milk Skyr - 1 cup - 240 g  
 
 - Muir Glen Tomatoes - 28 oz
 
