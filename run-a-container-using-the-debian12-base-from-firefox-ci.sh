@@ -15,7 +15,7 @@ docker load --input "$DOCKER_IMAGE.tar"
 echo "Cleaning up $DOCKER_IMAGE.tar"
 rm "$DOCKER_IMAGE.tar"
 echo "Running a $CONTAINER_NAME container using the $DOCKER_IMAGE image as the worker user..."
-echo "Mouting $SRC onto TARGET in $CONTAINER_NAME"
+echo "Mouting $SRC onto $TARGET in $CONTAINER_NAME"
 # app
 export EXTRA_MOZHARNESS_CONFIG="{\"objdir\": \"obj-build\", \"repackage_config\": [{\"args\": [\"deb\", \"--arch\", \"x86_64\", \"--templates\", \"browser/installer/linux/app/debian\", \"--version\", \"117.0a1\", \"--build-number\", \"1\", \"--release-product\", \"None\", \"--release-type\", \"nightly\"], \"inputs\": {\"input\": \"target.tar.bz2\"}, \"output\": \"target.deb\"}]}"
 #l10n
